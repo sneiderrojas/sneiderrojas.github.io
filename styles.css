@@ -58,7 +58,7 @@ nav ul li a:active {
 
 /* Hero Section */
 .hero {
-    background: url('/img/R1.png') no-repeat center center/cover;
+    background: url('/R1.png') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 6em 2em;
@@ -260,7 +260,7 @@ a, button, .cta {
     text-decoration: none;
 }
 #contacto {
-    background: url('/img/R1.png') no-repeat center center/cover;
+    background: url('/R1.png') no-repeat center center/cover;
     position: relative;
     color: #ddd;
     margin: 2em 0;
@@ -290,7 +290,7 @@ a, button, .cta {
 }
 /*------------------------------------------------*/
 #nosotros {
-    background: url('/img/mvpc_KKR_1107_diamond.jpg') no-repeat center center/cover;
+    background: url('/mvpc_KKR_1107_diamond.jpg') no-repeat center center/cover;
     position: relative;
     color: #f5f5f5; /* Color blanco para mejor contraste */
     margin: 2em 0;
@@ -330,7 +330,7 @@ a, button, .cta {
 
 
 #blog {
-    background: url('/img/news_ka_1127_debut.avif') no-repeat center center/cover;
+    background: url('/news_ka_1127_debut.avif') no-repeat center center/cover;
     position: relative;
     color: #ddd;
     margin: 2em 0;
