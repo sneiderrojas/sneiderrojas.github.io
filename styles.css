@@ -1,0 +1,388 @@
+/* Reset y configuración inicial */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #ddd;
+    background-color: #131313;
+}
+
+/* Header y Logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181818;
+    padding: 1em 5%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5em;
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #D4AF37;
+    transform: translateX(5px); /* Deslizamiento ligero hacia la derecha */
+}
+
+nav ul li a:active {
+    color: #D4AF37;
+    transform: scale(0.95); /* Ligera reducción en el tamaño al presionar */
+}
+
+/* Hero Section */
+.hero {
+    background: url('/img/R1.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 6em 2em;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.cta {
+    background-color: #D4AF37;
+    color: #fff;
+    padding: 0.75em 2em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #bfa133;
+}
+
+/* Secciones */
+section {
+    padding: 4em 5%;
+}
+
+#nosotros, #servicios, #productos, #blog, #contacto {
+    background-color: #181818;
+    color: #ddd;
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 2em;
+}
+
+h2 {
+    color: #D4AF37;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+/* Productos */
+.productos {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.producto {
+    text-align: center;
+    width: 197px;
+    color: #ddd;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+    transform: scale(1.05);
+}
+
+/* Servicios en cuadrícula */
+.servicios-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    justify-items: center;
+    padding-top: 20px;
+}
+
+.servicio-imagen {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.servicio-imagen:hover {
+    transform: scale(1.05);
+}
+
+/* Blog */
+#blog .post {
+    margin-top: 1em;
+}
+
+/* Formulario */
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1em;
+    color: #ddd;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #181818;
+    color: #ddd;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #D4AF37;
+    outline: none;
+}
+
+button {
+    margin-top: 1.5em;
+    padding: 0.75em 2em;
+    background-color: #D4AF37;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bfa133;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #181818;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+a, button, .cta {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para el Modal de Confirmación */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #181818;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #181818;
+    text-decoration: none;
+}
+#contacto {
+    background: url('/img/R1.png') no-repeat center center/cover;
+    position: relative;
+    color: #ddd;
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 2em;
+    overflow: hidden;
+}
+
+/* Capa oscura sobre la imagen de fondo */
+#contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.68); /* Ajusta la opacidad aquí */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Contenido en el frente */
+#contacto h2, #contacto form {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
+}
+/*------------------------------------------------*/
+#nosotros {
+    background: url('/img/mvpc_KKR_1107_diamond.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #f5f5f5; /* Color blanco para mejor contraste */
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 2em;
+    overflow: hidden;
+}
+
+/* Capa oscura sobre la imagen de fondo */
+#nosotros::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Opacidad ajustada */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Contenido en el frente */
+#nosotros h2,#nosotros h3, #nosotros p, #nosotros li, #nosotros span {
+    position: relative;
+    color: #f5f5f5; /* Blanco para mejor contraste */
+    z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
+}
+
+/* Estilo de encabezado */
+#nosotros h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffcc00; /* Color dorado */
+}
+
+
+
+#blog {
+    background: url('/img/news_ka_1127_debut.avif') no-repeat center center/cover;
+    position: relative;
+    color: #ddd;
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 2em;
+    overflow: hidden;
+}
+
+/* Capa oscura sobre la imagen de fondo */
+#blog::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.68); /* Ajusta la opacidad aquí */
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Contenido en el frente */
+#blog h2,#blog h3, #blog p, #blog li, #blog span {
+    position: relative;
+    color: #f5f5f5; /* Blanco para mejor contraste */
+    z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
+}
+#blog h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffcc00; /* Color dorado */
+}
+#video-kahoot {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f500;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#video-kahoot h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#video-kahoot video, 
+#video-kahoot iframe {
+    border: 3px solid #333;
+    border-radius: 8px;
+}
+
+
